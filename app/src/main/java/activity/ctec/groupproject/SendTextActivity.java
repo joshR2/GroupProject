@@ -13,6 +13,7 @@ import android.telephony.SmsManager;
 
 public class SendTextActivity extends Activity
 {
+    //josh
     private Button sendButton;
     private EditText phoneNumber;
     private EditText messageText;

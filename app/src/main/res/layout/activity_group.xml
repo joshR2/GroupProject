@@ -56,4 +56,14 @@
         android:layout_toRightOf="@+id/phoneNumber"
         android:layout_toEndOf="@+id/phoneNumber" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="josh"
+        android:id="@+id/textView"
+        android:layout_below="@+id/AlexButton"
+        android:layout_alignRight="@+id/AlexButton"
+        android:layout_alignEnd="@+id/AlexButton" />
+
 </RelativeLayout>
