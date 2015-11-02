@@ -8,12 +8,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Send Text"
         android:id="@+id/sendButton"
-        android:layout_marginTop="116dp"
         android:layout_below="@+id/phoneNumber"
-        android:layout_alignRight="@+id/phoneNumber"
-        android:layout_alignEnd="@+id/phoneNumber" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -30,12 +29,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/messageText"
-        android:layout_below="@+id/sendButton"
-        android:layout_marginTop="53dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:hint="Text Message" />
+        android:hint="Text Message"
+        android:layout_below="@+id/AlexButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text Alex"
+        android:id="@+id/AlexButton"
+        android:layout_below="@+id/JoshButton"
+        android:layout_alignRight="@+id/JoshButton"
+        android:layout_alignEnd="@+id/JoshButton"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text Josh"
+        android:id="@+id/JoshButton"
+        android:layout_below="@+id/phoneNumber"
+        android:layout_toRightOf="@+id/phoneNumber"
+        android:layout_toEndOf="@+id/phoneNumber" />
+
 </RelativeLayout>
