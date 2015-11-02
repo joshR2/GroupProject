@@ -16,6 +16,8 @@ public class SendTextActivity extends Activity
     private Button sendButton;
     private EditText phoneNumber;
     private EditText messageText;
+    private Button AlexButton;
+    private Button JoshButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,15 +28,58 @@ public class SendTextActivity extends Activity
         sendButton = (Button) findViewById(R.id.sendButton);
         phoneNumber = (EditText) findViewById(R.id.phoneNumber);
         messageText = (EditText) findViewById(R.id.messageText);
+        AlexButton = (Button) findViewById(R.id.AlexButton);
+        JoshButton = (Button) findViewById(R.id.JoshButton);
 
         setupListeners();
     }
     private void setupListeners()
     {
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View currentView) {
-                try {
+        sendButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View currentView)
+            {
+                try
+                {
                     String contact = phoneNumber.getText().toString();
+                    String message = messageText.getText().toString();
+                    sendSMS(contact, message);
+
+                    Toast.makeText(currentView.getContext(), "message was sent" , Toast.LENGTH_SHORT).show();
+                } catch (Exception currentException) {
+                    Toast.makeText(currentView.getContext(), "message was not sent" , Toast.LENGTH_LONG).show();
+                    Toast.makeText(currentView.getContext(), currentException.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        AlexButton.setOnClickListener(new View.OnClickListener()
+        {
+           public void onClick(View currentView)
+           {
+               try
+               {
+
+                   String contact = "8017181459";
+                   String message = messageText.getText().toString();
+                   sendSMS(contact, message);
+
+                   Toast.makeText(currentView.getContext(), "message was sent" , Toast.LENGTH_SHORT).show();
+               } catch (Exception currentException) {
+                   Toast.makeText(currentView.getContext(), "message was not sent" , Toast.LENGTH_LONG).show();
+                   Toast.makeText(currentView.getContext(), currentException.getMessage(), Toast.LENGTH_LONG).show();
+               }
+           }
+        });
+
+        JoshButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View currentView)
+            {
+                try
+                {
+
+                    String contact = "8018820589";
                     String message = messageText.getText().toString();
                     sendSMS(contact, message);
 
